@@ -42,11 +42,6 @@ jobs:
             artifact-name: rudder-${{ needs.init.outputs.version }}-linux-x86_64
             cargo-target: x86_64-unknown-linux-gnu
 
-          - name: Linux aarch64
-            runner-os: ubuntu-latest
-            artifact-name: rudder-${{ needs.init.outputs.version }}-linux-aarch64
-            cargo-target: aarch64-unknown-linux-gnu
-
           - name: macOS x86_64
             runner-os: macos-13
             artifact-name: rudder-${{ needs.init.outputs.version }}-macos-x86_64
@@ -67,13 +62,6 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.cargo-target }}
-
-      - name: Install build tooling (aarch64-unknown-linux-gnu)
-        if: matrix.cargo-target == 'aarch64-unknown-linux-gnu'
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y musl-tools clang llvm
-          sudo apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
 
       - name: Build binary
         run: |
