@@ -1261,7 +1261,7 @@ dependencies = [
 
 [[package]]
 name = "rudder-cli"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = [
  "anyhow",
  "axum",
@@ -1277,7 +1277,7 @@ dependencies = [
 
 [[package]]
 name = "rudder-cloudflare-worker"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = [
  "axum",
  "console_error_panic_hook",
@@ -1289,7 +1289,7 @@ dependencies = [
 
 [[package]]
 name = "rudder-extractors"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = [
  "axum",
  "base64",
@@ -1298,7 +1298,7 @@ dependencies = [
 
 [[package]]
 name = "rudder-http-client"
-version = "0.0.0"
+version = "0.0.1"
 dependencies = [
  "anyhow",
  "reqwest",
