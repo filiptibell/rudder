@@ -1,0 +1,18 @@
+[package]
+name = "rudder-extractors"
+version = { workspace = true }
+edition = { workspace = true }
+publish = { workspace = true }
+license = { workspace = true }
+
+[lib]
+name = "rudder_extractors"
+path = "src/lib.rs"
+
+[lints]
+workspace = true
+
+[dependencies]
+axum = { version = "0.8", default-features = false, features = ["query"] }
+base64 = "0.22"
+idna = "1.0"
